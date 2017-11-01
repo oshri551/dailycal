@@ -1,7 +1,8 @@
+ <div fxLayout="row">
+     <div fxFlex="90" *ngFor="let appointment of appointments" fxFlexOffset="5">
+        <app-appointment [appointment]="appointment"></app-appointment>
+     </div>
+ </div>
 
-<mat-grid-list cols="3">
-    <mat-grid-tile *ngFor="let appointment of appointments" cospan="1" rowspan="1">
-         <app-appointment [appointment]="appointment"></app-appointment>
-    </mat-grid-tile>
-    
- </mat-grid-list>
+
+ 

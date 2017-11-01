@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class DataService {
   private apiBaseUrl = 'http://localhost:3000';
-  
+
 
   constructor(private http: Http) {
    }
@@ -40,10 +40,10 @@ export class DataService {
                     .catch(err => this.handleError(err, 'getDevice', 'Get Device'));
   }
 
-  public register() {
-    const url = `${this.apiBaseUrl}/rest/v1/register/:tokenID'`;
+  register(token: string) {
+    const url = `${this.apiBaseUrl}/rest/v1/register/${token}`;
 
-    return this.http.get(url )
+    return this.http.get(url)
                     .map(data => this.extractData(data, 'getDeviceHistory'))
                     .catch(err => this.handleError(err, 'getDevice', 'Get Device'));
   }
