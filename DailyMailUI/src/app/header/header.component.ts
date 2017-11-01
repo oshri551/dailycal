@@ -20,7 +20,9 @@ export class HeaderComponent implements OnInit {
     if ($event.checked) {
       this.msgService.messaging.getToken()
         .then(token => {
-          this.dataSvc.register(token);
+          this.dataSvc.register(token).subscribe(() => {
+            console.log('registered');
+          });
         })
         .catch(err => console.log(err));
     }
