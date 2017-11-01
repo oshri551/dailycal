@@ -1,5 +1,5 @@
 import { getConfiguration, CONSTANTS } from '../configurations';
-import { Response } from '../objects';
+import { Response, MeetingData } from '../objects';
 import { InternalHttpRequest } from '../utils'
 
 export class MeetingsManager {
@@ -13,6 +13,19 @@ export class MeetingsManager {
              };
              return InternalHttpRequest.httpCall(httpOptions);
 
+      }
+
+      public static getMeetings(idsid: string): Promise<Response> {
+            let meetingData : MeetingData = new MeetingData();
+            let response: Response = new Response();
+            
+            
+            
+            
+            response.httpCode = CONSTANTS.HTTP_STATUS_CODE.OK;
+            response.data = meetingData;
+            response.status = true;
+            return Promise.resolve(response);
       }
 
  
