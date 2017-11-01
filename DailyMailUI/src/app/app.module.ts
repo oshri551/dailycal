@@ -5,11 +5,13 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { MessagingService } from './services/messaging.service';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+import { HeaderComponent } from './header/header.component';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
