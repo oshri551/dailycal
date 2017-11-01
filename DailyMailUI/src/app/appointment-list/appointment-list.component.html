@@ -1,20 +1,18 @@
 <md-tab-group>
     <md-tab label="Today">
-        <mat-grid-list cols="3">
-            <mat-grid-tile *ngFor="let appointment of appointmentsToday" cospan="1" rowspan="1">
-                 <app-appointment [appointment]="appointment"></app-appointment>
-            </mat-grid-tile>
-            
-         </mat-grid-list>
+        <div fxLayout="row">
+            <div fxFlex="90" *ngFor="let appointment of appointmentsToday" fxFlexOffset="5">
+                <app-appointment [appointment]="appointment"></app-appointment>
+            </div>
+        </div>
     </md-tab>
 
     <md-tab label="Tommorow">
-        <mat-grid-list cols="3">
-            <mat-grid-tile *ngFor="let appointment of appointmentsTommorow" cospan="1" rowspan="1">
-                 <app-appointment [appointment]="appointment"></app-appointment>
-            </mat-grid-tile>
-            
-         </mat-grid-list>
+        <div fxLayout="row">
+            <div fxFlex="90" *ngFor="let appointment of appointmentsTommorow" fxFlexOffset="5">
+                <app-appointment [appointment]="appointment"></app-appointment>
+            </div>
+        </div>
     </md-tab>
   </md-tab-group>
 

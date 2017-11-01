@@ -22,8 +22,7 @@ export class AppointmentListComponent implements OnInit {
     this.dataService.getAppointments().subscribe(res => {
       this.appointmentsToday = res.today;
       this.appointmentsTommorow = res.tommorow;
-    })
-
+    });
   }
 
 }
