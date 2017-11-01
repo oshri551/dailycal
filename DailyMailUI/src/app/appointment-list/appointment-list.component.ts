@@ -8,8 +8,8 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./appointment-list.component.scss']
 })
 export class AppointmentListComponent implements OnInit {
- appointmentsToday: any [];
- appointmentsTomorrow: any [];
+ appointmentsToday: any [] = [];
+ appointmentsTomorrow: any [] = [];
 
   constructor(private  dataService: DataService) { }
 

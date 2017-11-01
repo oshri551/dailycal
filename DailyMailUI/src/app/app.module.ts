@@ -9,6 +9,7 @@ import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { HeaderComponent } from './header/header.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
       messagingSenderId: '379123304454'
     }, 'MainNotifications'),
     MaterialModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [MessagingService , DataService],
   bootstrap: [AppComponent],
