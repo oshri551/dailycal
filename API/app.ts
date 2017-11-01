@@ -1,11 +1,11 @@
+import * as Passport from 'passport-azure-ad'
 import { Router }  from 'express';
 import { Server } from './server';
 import { MainRouter } from './routers';
 import { getConfiguration } from './configurations/config';
 
-
 // ###################      Start Here       ################
-
+let OIDCStrategy = Passport.OIDCStrategy;
 let serverInstance: Server = new Server();
 
 // configure the port

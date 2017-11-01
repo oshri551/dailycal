@@ -21,6 +21,6 @@ export class MainController implements IController {
     }
    
     public getData(): Promise<Response> {
-        return MeetingsManager.someAPI();
+        return MeetingsManager.getMeetings();
     }
 }

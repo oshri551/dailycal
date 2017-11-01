@@ -19,7 +19,7 @@ export class MainRouter extends RouterBase {
         this.m_expressRouter = express.Router();
         let mainController = MainController.getInstance();
         this.m_expressRouter.use(bodyParser.json());
-        this.m_expressRouter.route('/register/notification/:action')
+        this.m_expressRouter.route('/notification/:action')
 
         .all((req, res, next) => {
            // do your authorization and session management here
@@ -35,5 +35,15 @@ export class MainRouter extends RouterBase {
                 this.returnFailureResult(res, result);
             });
         });
+        this.m_expressRouter.route('/meetings')
+        .get((req, res, next) => {
+            mainController.getData()
+           .then((result: Response) => {
+                   this.returnSuccessResult(res, result);
+           })
+           .catch((result: Response) => {
+               this.returnFailureResult(res, result);
+           });
+       });
     }
 }
