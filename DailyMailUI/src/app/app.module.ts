@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MessagingService } from './services/messaging.service';
+import { DataService } from './services/data.service';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { HeaderComponent } from './header/header.component';
 import { AppointmentComponent } from './appointment/appointment.component';
@@ -23,9 +24,10 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
       apiKey: 'AIzaSyCLKqu5ESdtXK5_BbyqMJMCUo7ZGJjFUq8',
       messagingSenderId: '379123304454'
     }, 'MainNotifications'),
-    MaterialModule
+    MaterialModule,
+    HttpModule
   ],
-  providers: [MessagingService],
+  providers: [MessagingService , DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
