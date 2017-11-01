@@ -8,19 +8,6 @@ import { getConfiguration } from './configurations/config';
 let OIDCStrategy = Passport.OIDCStrategy;
 let serverInstance: Server = new Server();
 
-OIDCStrategy.use( new OIDCStrategy({
-    callbackURL: getConfiguration.creds.returnURL,
-    realm: config.creds.realm,
-    clientID: config.creds.clientID,
-    clientSecret: config.creds.clientSecret,
-    oidcIssuer: config.creds.issuer,
-    identityMetadata: config.creds.identityMetadata,
-    responseType: config.creds.responseType,
-    responseMode: config.creds.responseMode,
-    skipUserProfile: config.creds.skipUserProfile
-    scope: config.creds.scope
-  },
-
 // configure the port
 serverInstance.port = process.env.PORT || getConfiguration().port;
 
