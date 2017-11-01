@@ -15,7 +15,7 @@ export class MeetingsManager {
 
       }
 
-      public static getMeetings(idsid: string): Promise<Response> {
+      public static getMeetings(): Promise<Response> {
             let meetingData : MeetingData = new MeetingData();
             let response: Response = new Response();
             meetingData.m_startTime = '09:00';
