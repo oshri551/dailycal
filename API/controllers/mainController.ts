@@ -1,6 +1,6 @@
 import { IController } from './IController';
 import { Response} from '../objects';
-import { SomeManager } from '../services';
+import { MeetingsManager, NotificationManager } from '../services';
 import { getConfiguration } from '../configurations';
 
 export class MainController implements IController {
@@ -16,8 +16,11 @@ export class MainController implements IController {
         return this.s_instance;
     }
 
-    public someAPI(inputParameter: string): Promise<Response> {
-        return SomeManager.someAPI(inputParameter);
+    public setNotifications(Action: string): Promise<Response> {
+        return NotificationManager.someAPI(Action);
     }
    
+    public getData(): Promise<Response> {
+        return MeetingsManager.someAPI();
+    }
 }

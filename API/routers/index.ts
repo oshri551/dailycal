@@ -1,2 +1,2 @@
 export { RouterBase } from './routerBase';
-export { SomeRouter } from './someRouter';
+export { MainRouter } from './mainRouter';
