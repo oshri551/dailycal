@@ -1,7 +1,7 @@
 import * as Passport from 'passport-azure-ad'
 import { Router }  from 'express';
 import { Server } from './server';
-import { MainRouter } from './routers';
+import {NotificationRouter } from './routers';
 import { getConfiguration } from './configurations/config';
 
 // ###################      Start Here       ################
@@ -22,8 +22,9 @@ serverInstance.startServer('0.0.0.0');
 console.log(`TestServer is up and running, port: ${getConfiguration().port}`);
 
 function configureRouting(serverInstance: Server) {
-    let mainRouter: MainRouter = MainRouter.getInstance();
-    mainRouter.init();
-    serverInstance.setRouter('/rest/v1', mainRouter.router);
+    let notificationRouter: NotificationRouter = NotificationRouter.getInstance();
+    notificationRouter.init();
+    serverInstance.setRouter('/rest/v1', notificationRouter.router);
 }
+
 

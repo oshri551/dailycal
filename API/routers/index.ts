@@ -1,2 +1,2 @@
 export { RouterBase } from './routerBase';
-export { MainRouter } from './mainRouter';
+export { NotificationRouter } from './notificationRouter';

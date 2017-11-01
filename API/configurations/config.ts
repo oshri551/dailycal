@@ -6,10 +6,11 @@ const CONFIG = {
         'account': {
             'userName': '',
             'domain': 'amr',
-            'password': ''
+            'password': '',
+            'token': 'AAAAWEWCiAY:APA91bE7Bomi89TySQqkIPEppHKDl4Fs0eld99GOwE6QCaPjjlanjbsFGl5LvWxsUIbtUqcLpt3svJMoshIrkPQqb9mT2HEUowOZPpjT3XMx2MgY5fpnP7vSnBN9j1gEH7fujRlXBUnT'
         },
-        'someServer': {
-            'host': 'https://httpbin.org',
+        'notificationServer': {
+            'host': 'https://fcm.googleapis.com',
             'port': 443
         },
         "creds": {
@@ -23,11 +24,12 @@ const CONFIG = {
         'port': 443,
         'account': {
             'userName': '',
+            'token': 'AAAAWEWCiAY:APA91bE7Bomi89TySQqkIPEppHKDl4Fs0eld99GOwE6QCaPjjlanjbsFGl5LvWxsUIbtUqcLpt3svJMoshIrkPQqb9mT2HEUowOZPpjT3XMx2MgY5fpnP7vSnBN9j1gEH7fujRlXBUnT',
             'domain': 'amr',
             'password': ''
         },
-        'someServer': {
-            'host': 'https://httpbin.org',
+        'notificationServer': {
+            'host': 'https://fcm.googleapis.com/fcm/send',
             'port': 443
         },
         "creds": {
@@ -42,10 +44,11 @@ const CONFIG = {
         'account': {
             'userName': '',
             'domain': 'amr',
-            'password': ''
+            'password': '',
+            'token': 'AAAAWEWCiAY:APA91bE7Bomi89TySQqkIPEppHKDl4Fs0eld99GOwE6QCaPjjlanjbsFGl5LvWxsUIbtUqcLpt3svJMoshIrkPQqb9mT2HEUowOZPpjT3XMx2MgY5fpnP7vSnBN9j1gEH7fujRlXBUnT'
         },
-        'someServer': {
-            'host': 'https://httpbin.org',
+        'notificationServer': {
+            'host': 'https://fcm.googleapis.com/fcm/send',
             'port': 443
         },
         "creds": {

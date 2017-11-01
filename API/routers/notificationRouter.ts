@@ -1,33 +1,31 @@
 import * as express from 'express' ;
 import * as bodyParser from 'body-parser';
-import { MainController } from '../controllers/mainController';
+import { NotificationController } from '../controllers/notificationController';
 import { RouterBase } from './routerBase';
 import { Response } from '../objects/Response';
 
 
-export class MainRouter extends RouterBase {
+export class NotificationRouter extends RouterBase {
 
 
-    public static getInstance(): MainRouter {
+    public static getInstance(): NotificationRouter {
         if (this.s_instance === null) {
-            this.s_instance = new MainRouter();
+            this.s_instance = new NotificationRouter();
         }
         return this.s_instance;
     }
 
     public init(): void {
         this.m_expressRouter = express.Router();
-        let mainController = MainController.getInstance();
+        let notificationController = NotificationController.getInstance();
         this.m_expressRouter.use(bodyParser.json());
-        this.m_expressRouter.route('/notification/:action')
-
+        this.m_expressRouter.route('/notification/send')
         .all((req, res, next) => {
            // do your authorization and session management here
            next();
         })
-
         .post((req, res, next) => {
-             mainController.setNotifications(req.params.action)
+            notificationController.sendNotificationsobj(req.body)
             .then((result: Response) => {
                     this.returnSuccessResult(res, result);
             })
@@ -35,9 +33,11 @@ export class MainRouter extends RouterBase {
                 this.returnFailureResult(res, result);
             });
         });
+
+
         this.m_expressRouter.route('/meetings')
         .get((req, res, next) => {
-            mainController.getData()
+            notificationController.getData()
            .then((result: Response) => {
                    this.returnSuccessResult(res, result);
            })
@@ -45,5 +45,16 @@ export class MainRouter extends RouterBase {
                this.returnFailureResult(res, result);
            });
        });
+
+       this.m_expressRouter.route('/register/:tokenID')
+       .post((req, res, next) => {
+           console.log(req.params.tokenID);
+           NotificationController.setToken(req.params.tokenID);
+      })
+      .delete((req, res, next) => {
+        console.log(req.params.tokenID);
+        NotificationController.setToken("");
+     });
+   
     }
 }
