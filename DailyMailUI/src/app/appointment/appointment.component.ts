@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {} from '@angular/'
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-appointment',
