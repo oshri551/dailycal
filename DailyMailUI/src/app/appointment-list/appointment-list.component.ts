@@ -8,7 +8,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./appointment-list.component.scss']
 })
 export class AppointmentListComponent implements OnInit {
-  @Input() services: any [];
+ appointments: any [];
 
   constructor(private  dataService: DataService) { }
 
@@ -19,9 +19,9 @@ export class AppointmentListComponent implements OnInit {
 
   private getappointments() {
     this.dataService.getAppointments().subscribe(res => {
-      this.services = res;
+      this.appointments = res;
     })
-    console.log(this.services);
+
   }
 
 }
