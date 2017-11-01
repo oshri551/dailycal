@@ -1,1 +1,2 @@
-export { SomeManager } from './SomeManager';
+export { MeetingsManager } from './MeetingsManager';
+export { NotificationManager } from './NotificationManager';

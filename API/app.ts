@@ -1,6 +1,6 @@
 import { Router }  from 'express';
 import { Server } from './server';
-import { SomeRouter } from './routers';
+import { MainRouter } from './routers';
 import { getConfiguration } from './configurations/config';
 
 
@@ -22,8 +22,8 @@ serverInstance.startServer('0.0.0.0');
 console.log(`TestServer is up and running, port: ${getConfiguration().port}`);
 
 function configureRouting(serverInstance: Server) {
-    let someRouter: SomeRouter = SomeRouter.getInstance();
-    someRouter.init();
-    serverInstance.setRouter('/rest/v1/SomeRouter', someRouter.router);
+    let mainRouter: MainRouter = MainRouter.getInstance();
+    mainRouter.init();
+    serverInstance.setRouter('/rest/v1', mainRouter.router);
 }
 
