@@ -8,8 +8,8 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./appointment-list.component.scss']
 })
 export class AppointmentListComponent implements OnInit {
- appointmentsToday: any [];
- appointmentsTommorow: any [];
+ appointmentsToday: any [] = [];
+ appointmentsTommorow: any [] = [];
 
   constructor(private  dataService: DataService) { }
 
@@ -21,7 +21,7 @@ export class AppointmentListComponent implements OnInit {
   private getappointments() {
     this.dataService.getAppointments().subscribe(res => {
       this.appointmentsToday = res.today;
-      this.appointmentsTommorow = res.tommorow;
+      this.appointmentsTommorow = res.tomorrow;
     });
   }
 
