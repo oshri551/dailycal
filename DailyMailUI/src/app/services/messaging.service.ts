@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 // import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
+firebase.initializeApp({messagingSenderId: '379123304454'});
 import 'rxjs/add/operator/take';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
