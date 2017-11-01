@@ -9,7 +9,7 @@ import { DataService } from '../services/data.service';
 })
 export class AppointmentListComponent implements OnInit {
  appointmentsToday: any [] = [];
- appointmentsTommorow: any [] = [];
+ appointmentsTomorrow: any [] = [];
 
   constructor(private  dataService: DataService) { }
 
@@ -21,7 +21,7 @@ export class AppointmentListComponent implements OnInit {
   private getappointments() {
     this.dataService.getAppointments().subscribe(res => {
       this.appointmentsToday = res.today;
-      this.appointmentsTommorow = res.tomorrow;
+      this.appointmentsTomorrow = res.tomorrow;
     });
   }
 
