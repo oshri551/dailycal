@@ -1,6 +1,6 @@
 export class MeetingData {
-    public m_startTime: number;
-    public m_endTime: number;
+    public m_startTime: string;
+    public m_endTime: string;
     public m_phoneNumber: number;
     public m_location: string;
     public constructor() {

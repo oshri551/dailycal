@@ -18,9 +18,9 @@ export class MeetingsManager {
       public static getMeetings(idsid: string): Promise<Response> {
             let meetingData : MeetingData = new MeetingData();
             let response: Response = new Response();
-            
-            
-            
+            meetingData.m_startTime = '09:00';
+            meetingData.m_endTime = '10:00';
+            meetingData.m_location = 'l105'
             
             response.httpCode = CONSTANTS.HTTP_STATUS_CODE.OK;
             response.data = meetingData;
