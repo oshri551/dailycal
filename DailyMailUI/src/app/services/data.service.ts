@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
-  private apiBaseUrl = 'http://3000';
+  private apiBaseUrl = 'http://localhost:3000';
   
 
   constructor(private http: Http) {
