@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { MessagingService } from './services/messaging.service';
@@ -15,8 +16,8 @@ import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyCLKqu5ESdtXK5_BbyqMJMCUo7ZGJjFUq8',
       messagingSenderId: '379123304454'
-    }, 'MainNotifications')
-    // AngularFireDatabaseModule
+    }, 'MainNotifications'),
+    MaterialModule
   ],
   providers: [MessagingService],
   bootstrap: [AppComponent]
