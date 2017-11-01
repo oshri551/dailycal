@@ -1,0 +1,7 @@
+
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let appointment of appointments" cospan="1" rowspan="1">
+         <app-appointment [appointment]="appointment"></app-appointment>
+    </mat-grid-tile>
+    
+ </mat-grid-list>

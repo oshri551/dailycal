@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { MessagingService } from './services/messaging.service';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { HeaderComponent } from './header/header.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AppointmentComponent,
+    AppointmentListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,6 @@ import { HeaderComponent } from './header/header.component';
     MaterialModule
   ],
   providers: [MessagingService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
