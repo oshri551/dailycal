@@ -32,7 +32,7 @@ today: [
                                   startTime : 'Wed Nov 02 2017 20:00:00 GMT+0200',
                                   endTime : 'Wed Nov 02 2017 21:00:00 GMT+0200',
                                   phoneNumber : '086122663',
-                                  m_location : 'TBD'
+                                  location : 'TBD'
     },
     
     {
