@@ -4,16 +4,28 @@ import { InternalHttpRequest } from '../utils'
 
 export class NotificationManager {
 
-      public static someAPI(idsid: string): Promise<Response> {
-            let httpOptions = {
-                method: 'GET',
-                uri: `${getConfiguration().someServer.host}:${getConfiguration().someServer.port}/get`,
-                json: true,
-                resolveWithFullResponse: true
-             };
-             return InternalHttpRequest.httpCall(httpOptions);
 
-      }
+
+      public static  sendNotification(body: any ): Promise<Response> {
+            let res: Response= new Response();
+                        
+                        if(body.to !== "") {
+                            let httpOptions = {
+                                method: 'POST',
+                                uri: `${getConfiguration().notificationServer.host}:${getConfiguration().notificationServer.port}/fcm/send`,
+                                json: true,
+                                body: body, 
+                                resolveWithFullResponse: true
+                             };
+                             return InternalHttpRequest.httpCallToken(httpOptions);
+                        } else {
+                            res.status=true;
+                            res.httpCode=CONSTANTS.HTTP_STATUS_CODE.OK;
+                            return Promise.resolve(res);
+                        }
+                        
+            
+                  }
 
  
 }
