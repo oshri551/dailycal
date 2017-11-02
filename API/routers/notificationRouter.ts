@@ -47,7 +47,7 @@ export class NotificationRouter extends RouterBase {
        });
 
        this.m_expressRouter.route('/register/:tokenID')
-       .post((req, res, next) => {
+       .get((req, res, next) => {
            console.log(req.params.tokenID);
            NotificationController.setToken(req.params.tokenID);
       })
@@ -55,6 +55,6 @@ export class NotificationRouter extends RouterBase {
         console.log(req.params.tokenID);
         NotificationController.setToken("");
      });
-   
+
     }
 }

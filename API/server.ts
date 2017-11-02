@@ -2,6 +2,7 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as morgan from 'morgan';
+import * as cors from 'cors';
 
 export class Server {
 
@@ -15,6 +16,7 @@ export class Server {
     this.m_app.use(bodyParser.urlencoded({
         extended: true
     }));
+    this.m_app.use(cors());
 
   }
 
