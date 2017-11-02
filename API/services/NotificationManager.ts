@@ -15,17 +15,22 @@ export class NotificationManager {
                                 uri: `${getConfiguration().notificationServer.host}:${getConfiguration().notificationServer.port}/fcm/send`,
                                 json: true,
                                 body: body, 
-                                resolveWithFullResponse: true
+                                resolveWithFullResponse: true,
+                                headers: {
+                                    authorization : `key=${getConfiguration().account.token}`
+                                }
                              };
+                             console.log(JSON.stringify(body));
                              return InternalHttpRequest.httpCallToken(httpOptions);
                         } else {
-                            res.status=true;
-                            res.httpCode=CONSTANTS.HTTP_STATUS_CODE.OK;
+                            res.status = true;
+                            res.httpCode = CONSTANTS.HTTP_STATUS_CODE.OK;
                             return Promise.resolve(res);
                         }
                         
             
                   }
 
+                  
  
 }

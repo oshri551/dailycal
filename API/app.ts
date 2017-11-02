@@ -2,6 +2,7 @@ import * as Passport from 'passport-azure-ad'
 import { Router }  from 'express';
 import { Server } from './server';
 import {NotificationRouter } from './routers';
+import {  PushNotifications } from './tasks/pushNotifications';
 import { getConfiguration } from './configurations/config';
 
 // ###################      Start Here       ################
@@ -26,5 +27,12 @@ function configureRouting(serverInstance: Server) {
     notificationRouter.init();
     serverInstance.setRouter('/rest/v1', notificationRouter.router);
 }
+
+
+// configure tasks
+let taskSchedular: PushNotifications = PushNotifications.getInstance();
+taskSchedular.start();
+
+
 
 

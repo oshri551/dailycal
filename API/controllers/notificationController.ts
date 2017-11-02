@@ -5,7 +5,7 @@ import { getConfiguration } from '../configurations';
 
 export class NotificationController  {
     private static s_instance = null;
-    private static s_tokenID = null;
+    private static s_tokenID = `exHk5g3hdyU:APA91bG1KqSI_b7LRR72bJDVfaOq9uM5YxL8Zrif6SajHDqRBfaAuvt3OHcQm11QYs2h6xqUeclQOdG6wS9l4KIsXK8nbpbe3j-ItUT4fpoKmtpgXF7Lsp8jzx1zv-8I8r_hN2WDBhN3`;
     private constructor() {
 
     }
@@ -21,8 +21,13 @@ export class NotificationController  {
         this.s_tokenID = tokenID;
     }
 
-    public sendNotifications(titel: string, text: string , token: string): Promise<Response> {
+    public static getToken(): string {
+        return this.s_tokenID;
+    }
 
+    /*public sendNotifications(titel: string, text: string , token: string): Promise<Response> {
+        
+        token= getConfiguration().token;
         
         let postBody = {
             titel: titel,
@@ -33,11 +38,12 @@ export class NotificationController  {
             return NotificationManager.sendNotification(postBody);
         }
     
-    }
+    }*/
 
     public sendNotificationsobj(body : any): Promise<Response> {
         return NotificationManager.sendNotification(body);
     }
+
    
     public getData(): Promise<Response> {
         return MeetingsManager.getMeetings();
