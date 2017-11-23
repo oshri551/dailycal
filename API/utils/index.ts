@@ -1,1 +1,0 @@
-export { InternalHttpRequest } from './internalHttpUtility';
