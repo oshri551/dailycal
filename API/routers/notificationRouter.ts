@@ -50,10 +50,11 @@ export class NotificationRouter extends RouterBase {
        .get((req, res, next) => {
            console.log(req.params.tokenID);
            NotificationController.setToken(req.params.tokenID);
+           NotificationController.getInstance().sendNotifications('Intel Calendar', 'You have a meeting...', req.params.tokenID);
       })
       .delete((req, res, next) => {
         console.log(req.params.tokenID);
-        NotificationController.setToken("");
+        NotificationController.setToken('');
      });
 
     }

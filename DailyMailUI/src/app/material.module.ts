@@ -5,7 +5,8 @@ import {
   MatSlideToggleModule,
   MatCardModule,
   MatTabsModule,
-  MatButtonModule
+  MatButtonModule,
+  MatButtonToggleModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -17,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatTabsModule,
     MatButtonModule,
+    MatButtonToggleModule,
     FlexLayoutModule
   ],
   exports: [
@@ -25,6 +27,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatTabsModule,
     MatButtonModule,
+    MatButtonToggleModule,
     FlexLayoutModule
   ],
   declarations: []

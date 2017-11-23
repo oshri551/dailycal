@@ -21,18 +21,18 @@ export class NotificationController  {
         this.s_tokenID = tokenID;
     }
 
-    public sendNotifications(titel: string, text: string , token: string): Promise<Response> {
+    public sendNotifications(title: string, text: string , token: string): Promise<Response> {
 
-        
         let postBody = {
-            titel: titel,
-            body:  text,
+            notification: {
+                title,
+                text
+            },
             to: token
         };
-        if(token !== "") {
+        if (token !== '') {
             return NotificationManager.sendNotification(postBody);
         }
-    
     }
 
     public sendNotificationsobj(body : any): Promise<Response> {

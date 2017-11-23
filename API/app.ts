@@ -1,4 +1,4 @@
-import * as Passport from 'passport-azure-ad'
+import * as Passport from 'passport-azure-ad';
 import { Router }  from 'express';
 import { Server } from './server';
 import {NotificationRouter } from './routers';

@@ -13,10 +13,10 @@ const CONFIG = {
             'host': 'https://fcm.googleapis.com',
             'port': 443
         },
-        "creds": {
-            "clientID": "9e645106-ee5c-4a50-9538-7ec7a2464d7a",
-            "returnURL": "http://localhost:3000/token",
-            "clientSecret": "xdwCY213uwlgJQLFK19\\&<:"
+        'creds': {
+            'clientID': '9e645106-ee5c-4a50-9538-7ec7a2464d7a',
+            'returnURL': 'http://localhost:3000/token',
+            'clientSecret': 'xdwCY213uwlgJQLFK19\\&<:'
         }
     },
     'preprod':
@@ -32,10 +32,10 @@ const CONFIG = {
             'host': 'https://fcm.googleapis.com/fcm/send',
             'port': 443
         },
-        "creds": {
-            "clientID": "9e645106-ee5c-4a50-9538-7ec7a2464d7a",
-            "returnURL": "http://localhost:3000/token",
-            "clientSecret": "xdwCY213uwlgJQLFK19\\&<:"
+        'creds': {
+            'clientID': '9e645106-ee5c-4a50-9538-7ec7a2464d7a',
+            'returnURL': 'http://localhost:3000/token',
+            'clientSecret': 'xdwCY213uwlgJQLFK19\\&<:'
         }
     },
     'prod':
@@ -51,10 +51,10 @@ const CONFIG = {
             'host': 'https://fcm.googleapis.com/fcm/send',
             'port': 443
         },
-        "creds": {
-            "clientID": "9e645106-ee5c-4a50-9538-7ec7a2464d7a",
-            "returnURL": "http://localhost:3000/token",
-            "clientSecret": "xdwCY213uwlgJQLFK19\\&<:"
+        'creds': {
+            'clientID': '9e645106-ee5c-4a50-9538-7ec7a2464d7a',
+            'returnURL': 'http://localhost:3000/token',
+            'clientSecret': 'xdwCY213uwlgJQLFK19\\&<:'
         }
     }
 
