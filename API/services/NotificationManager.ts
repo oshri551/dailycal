@@ -3,9 +3,6 @@ import { Response } from '../objects';
 import { InternalHttpRequest } from '../utils';
 
 export class NotificationManager {
-
-
-
     public static  sendNotification(body: any ): Promise<Response> {
         let res: Response = new Response();
 

@@ -3,6 +3,7 @@ const CONFIG = {
     'dev':
     {
         'port': 3000,
+        'token': 'd3GtAH7sZUE:APA91bFkLPXjhP9UZBPJgz3AyTnmtbilhLio_E_JZjVjwyTIZyChzQyTvpTtEovR7AsvCgqN7I7cp75NGW6Nzm85Nipx9ebUkSkG8DxOggwLOlSNBjlw-cOqlUaSMIgbTV9p69o6cnrz',
         'account': {
             'userName': '',
             'domain': 'amr',
@@ -22,11 +23,12 @@ const CONFIG = {
     'preprod':
     {
         'port': 443,
+        'token': 'd3GtAH7sZUE:APA91bFkLPXjhP9UZBPJgz3AyTnmtbilhLio_E_JZjVjwyTIZyChzQyTvpTtEovR7AsvCgqN7I7cp75NGW6Nzm85Nipx9ebUkSkG8DxOggwLOlSNBjlw-cOqlUaSMIgbTV9p69o6cnrz',
         'account': {
             'userName': '',
-            'token': 'AAAAWEWCiAY:APA91bE7Bomi89TySQqkIPEppHKDl4Fs0eld99GOwE6QCaPjjlanjbsFGl5LvWxsUIbtUqcLpt3svJMoshIrkPQqb9mT2HEUowOZPpjT3XMx2MgY5fpnP7vSnBN9j1gEH7fujRlXBUnT',
             'domain': 'amr',
-            'password': ''
+            'password': '',
+            'token': 'AAAAWEWCiAY:APA91bE7Bomi89TySQqkIPEppHKDl4Fs0eld99GOwE6QCaPjjlanjbsFGl5LvWxsUIbtUqcLpt3svJMoshIrkPQqb9mT2HEUowOZPpjT3XMx2MgY5fpnP7vSnBN9j1gEH7fujRlXBUnT'
         },
         'notificationServer': {
             'host': 'https://fcm.googleapis.com/fcm/send',
@@ -41,6 +43,7 @@ const CONFIG = {
     'prod':
     {
         'port': 443,
+        'token': 'd3GtAH7sZUE:APA91bFkLPXjhP9UZBPJgz3AyTnmtbilhLio_E_JZjVjwyTIZyChzQyTvpTtEovR7AsvCgqN7I7cp75NGW6Nzm85Nipx9ebUkSkG8DxOggwLOlSNBjlw-cOqlUaSMIgbTV9p69o6cnrz',
         'account': {
             'userName': '',
             'domain': 'amr',

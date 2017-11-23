@@ -5,7 +5,7 @@ import { getConfiguration } from '../configurations';
 
 export class NotificationController  {
     private static s_instance = null;
-    private static s_tokenID = null;
+    private static s_tokenID = `exHk5g3hdyU:APA91bG1KqSI_b7LRR72bJDVfaOq9uM5YxL8Zrif6SajHDqRBfaAuvt3OHcQm11QYs2h6xqUeclQOdG6wS9l4KIsXK8nbpbe3j-ItUT4fpoKmtpgXF7Lsp8jzx1zv-8I8r_hN2WDBhN3`;
     private constructor() {
 
     }
@@ -35,10 +35,10 @@ export class NotificationController  {
         }
     }
 
-    public sendNotificationsobj(body : any): Promise<Response> {
+    public sendNotificationsobj(body: any): Promise<Response> {
         return NotificationManager.sendNotification(body);
     }
-   
+
     public getData(): Promise<Response> {
         return MeetingsManager.getMeetings();
     }
