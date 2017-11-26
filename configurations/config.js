@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const CONFIG = {
     'dev': {
-        'port': 3000,
+        'port': 443,
         'token': 'd3GtAH7sZUE:APA91bFkLPXjhP9UZBPJgz3AyTnmtbilhLio_E_JZjVjwyTIZyChzQyTvpTtEovR7AsvCgqN7I7cp75NGW6Nzm85Nipx9ebUkSkG8DxOggwLOlSNBjlw-cOqlUaSMIgbTV9p69o6cnrz',
         'account': {
             'userName': '',
@@ -39,7 +39,7 @@ const CONFIG = {
             'clientSecret': 'xdwCY213uwlgJQLFK19\\&<:'
         }
     },
-    'prod': {
+    'production': {
         'port': 443,
         'token': 'd3GtAH7sZUE:APA91bFkLPXjhP9UZBPJgz3AyTnmtbilhLio_E_JZjVjwyTIZyChzQyTvpTtEovR7AsvCgqN7I7cp75NGW6Nzm85Nipx9ebUkSkG8DxOggwLOlSNBjlw-cOqlUaSMIgbTV9p69o6cnrz',
         'account': {
